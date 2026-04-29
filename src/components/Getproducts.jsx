@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
-// import Mycarousel from './Mycarousel';
+import Mycarousel from './Mycarousel';
 
 const Getproducts = () => {
 
@@ -117,6 +117,7 @@ Stay awhile. You’ll like it here.
     </div>
   </div>
 </div>
+<Mycarousel />
 
         {loading && <Loader />}
          <h2 className='text-secondary fs-7 fst-italic'>
