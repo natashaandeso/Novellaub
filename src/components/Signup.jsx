@@ -60,65 +60,59 @@ const Signup = () => {
     }
 
   }
+  
 
   return (
-    // <!-- From Uiverse.io by mi-series --> 
-<div class="container justify-content-center col-md-6 signin">
-  <div class="heading">Sign In</div>
+    
+    <div className="signup-wrapper d-flex align-items-center justify-content-center">
+      <div className="signup-container animate__animated animate__fadeInUp">
 
-      <h5 className="text-warning">{loading}</h5>
+           <h5 className="text-warning">{loading}</h5>
       <h3 className="text-success">{success}</h3>
       <h4 className="text-danger">{error}</h4>
-      
-  <form class="form" onSubmit={handleSubmit}>
 
-     <input type="text"
-       placeholder='Enter the username'
-      className='form-control'
-      value={username}
-      onChange={(e) => setUsername(e.target.value)}
-      required /> <br />
+        <div className="row g-0">
+          {/* Left Side: Aesthetic Image/Color */}
+          <div className="col-lg-5 d-none d-lg-block signup-accent">
+             <div className="accent-content">
+                <h2>Welcome to the Library 📖</h2>
+                <p>Every great story starts with a single click.</p>
+             </div>
+          </div>
 
-      {/* {username} */}
-    <input
-      placeholder="E-mail"
-      id="email"
-      name="email"
-      type="email"
-      class="input"
-      required
-    /> <br /> 
+          {/* Right Side: The Form */}
+          <div className="col-lg-7 p-5">
+            <h3 className="brand-text mb-4">Create your account ✨</h3>
+            <form>
+              <div className="mb-3">
+                <label className="form-label small-text">Full Name</label>
+                <input type="text" className="form-control cute-input" placeholder="e.g. Jane Austen" />
+              </div>
 
-    <input
-      placeholder="Password"
-      id="password"
-      name="password"
-      type="password"
-      class="input"
-      required
-    /> <br /> <br />
+              <div className="mb-3">
+                <label className="form-label small-text">Email Address</label>
+                <input type="email" className="form-control cute-input" placeholder="name@vibes.com" />
+              </div>
 
-    <input type="number"
-     placeholder='Enter the mobile phone number'
-     className='form-control'
-    value={phone}
-     onChange={(e) => setPhone(e.target.value)}
-    required /> <br />
+              <div className="mb-4">
+                <label className="form-label small-text">Password</label>
+                <input type="password" className="form-control cute-input" placeholder="••••••••" />
+              </div>
 
-    {/* {phone} */}
-
-    <span class="forgot-password"><a href="#">Forgot Password ?</a></span> <br />
-    
-    <input value="Sign In" type="submit" class="login-button" />
-  </form>
- 
-    Already  have an account? <Link to='/signin'>Signin</Link>
-
-  <span class="agreement"><a>Learn user licence agreement</a></span>
-</div>
-  )
-  
-}
+              <button type="submit" className="signup-btn w-100 py-3 shadow-lg">
+                Begin the Journey 🦋
+              </button>
+              
+              <p className="text-center mt-4 small text-muted">
+                Already have an account? <a href="/Signin" className="text-purple">Sign In</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 
 export default Signup;

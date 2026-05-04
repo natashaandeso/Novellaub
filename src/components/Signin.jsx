@@ -63,44 +63,41 @@ const Signin = () => {
 
 
   return (
-    // <!-- From Uiverse.io by mahbowal --> 
-    <div className='signin'>
-<div className="container justify-content-center col-md-6">
-  <div class="heading ">Sign In</div>
 
-      <h5 className="text-warning">{loading}</h5>
+    <div className="signin-container d-flex justify-content-center align-items-center">
+      <div className="signin-card p-5 shadow-lg text-center">
+
+          <h5 className="text-warning">{loading}</h5>
       <h3 className="text-success">{success}</h3>
       <h4 className="text-danger">{error}</h4>
-      
-  <form class="form" onSubmit={handlesubmit}>
-    <input
-      placeholder="E-mail"
-      id="email"
-      name="email"
-      type="email"
-      class="input"
-      required
-    />
-    <input
-      placeholder="Password"
-      id="password"
-      name="password"
-      type="password"
-      class="input"
-      required
-    />
-    <span class="forgot-password"><a href="#">Forgot Password ?</a></span> <br />
-    
-    <input value="Sign In" type="submit" class="login-button" />
-  </form>
- 
-    Don't  have an account? <Link to='/signup'>Signup</Link>
 
-  <span class="agreement"><a href="#">Learn user licence agreement</a></span>
-</div>
-</div>
-  )
-}
+        <div className="login-icon mb-4">📖</div>
+        <h2 className="brand-text mb-2">Welcome Back!</h2>
+        <p className="text-muted small mb-4">The next chapter is waiting for you.</p>
+        
+        <form>
+          <div className="input-group-custom mb-3">
+            <input type="text" required placeholder="Username" className="form-control-cute" />
+          </div>
+          
+          <div className="input-group-custom mb-4">
+            <input type="password" required placeholder="Password" className="form-control-cute" />
+          </div>
+          
+          <button type="submit" className="signin-btn-main w-100 mb-3">
+            Open the Hub
+          </button>
+          
+          <div className="form-footer">
+            <span className="text-muted small">New reader? </span>
+            <a href="/signup" className="signup-link">Create an account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
 
 
 export default Signin;

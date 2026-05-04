@@ -2,72 +2,59 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="footer-container">
-      <div className="container">
-        <div className="row">
-
-          {/* About Us */}
-         <div className="col-md-4 mb-4">
-          <h4>About Us</h4>
-
-          <a href="/">
-            <img 
-              src="/images/blackcake.jfif" 
-              alt="Bakery Logo" 
-              className="footer-logo"
-            />
-          </a>
-
-          <p>
-            We are passionate about delivering fresh, delicious baked goods 
-            made with love. Our mission is to bring joy to every bite and 
-            make your moments sweeter.
-          </p>
+    <footer className="novella-footer">
+  <div >
+    <div className="row py-5 align-items-center">
+      {/* Brand & Mission */}
+      <div className="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+        <h3 className="brand-text footer-logo">NovellaHub 🦋</h3>
+        <p className="footer-tagline">Baking stories into every bite since 2026.</p>
+        <div className="social-icons">
+          <span className="icon">📸</span>
+          <span className="icon">🐦</span>
+          <span className="icon">📘</span>
         </div>
-          {/* Contact Form */}
-          <div className="col-md-4 mb-4">
-            <h4>Contact Us</h4>
-            <form>
-              <input type="text" placeholder="Your Name" className="form-control mb-2" />
-              <input type="email" placeholder="Your Email" className="form-control mb-2" />
-              <textarea placeholder="Your Message" className="form-control mb-2"></textarea>
-              <button className="btn btn-primary w-100">Send</button>
-            </form>
-          </div>
+      </div>
 
-          {/* Social Media */}
-          <div className="col-md-4 mb-4 text-center">
-            <h4>Follow Us</h4>
-  
-  <div className="social-icons">
+      {/* Quick Links */}
+      <div className="col-lg-4 text-center mb-4 mb-lg-0">
+        <h5 className="footer-title">Sweet Links</h5>
+        <ul className="list-unstyled">
+          <li><a href="/" className="footer-link">Our Story</a></li>
+          <li><a href="/menu" className="footer-link">Daily Treats</a></li>
+          <li><a href="/contact" className="footer-link">Say Hello</a></li>
+        </ul>
+      </div>
+
+   <div className="social-container text-center col-lg-4 mb-4 mb-lg-0">
+  <h5 className="footer-title mb-3">Connect with NovellaHub 🦋</h5>
+  <div className="social-icons-wrapper d-flex justify-content-center gap-3">
     
-    <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
-      <i className="bi bi-facebook"></i>
-    </a> <br />
+    <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-pill">
+      <img src="/social.png" alt="Instagram" className="social-icon-img" />
+      <span className="social-label">Instagram</span>
+    </a>
 
-    <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
-      <i className="bi bi-instagram"></i>
-    </a> <br />
+    <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-pill">
+      <img src="/face-book.png" alt="Facebook" className="social-icon-img" />
+      <span className="social-label">Facebook</span>
+    </a>
 
-    <a href="https://twitter.com/yourpage" target="_blank" rel="noopener noreferrer">
-      <i className="bi bi-twitter"></i>
-    </a> <br />
-
-    <a href="https://wa.me/254712345678" target="_blank" rel="noopener noreferrer">
-      <i className="bi bi-whatsapp"></i>
-    </a> <br />
+    <a href="https://pinterest.com" target="_blank" rel="noreferrer" className="social-pill">
+      <img src="/pinterest.png" alt="Pinterest" className="social-icon-img" />
+      <span className="social-label">Pinterest</span>
+    </a>
 
   </div>
+</div>
+    </div>
 
-          </div>
-
-        </div>
-
-        <hr />
-
-        <p className="text-center">&copy; 2026 Tasha's Bakery. All rights reserved.</p>
-      </div>
-    </footer>
+    {/* Bottom Bar */}
+    <div className="footer-bottom text-center py-3">
+      <small>© 2026 NovellaHub. Made with 💖 and sugar.</small>
+    </div>
+  </div>
+</footer>
   );
 }
 

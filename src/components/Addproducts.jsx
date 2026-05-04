@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const Addproducts = () => {
   
+  const [preview, setPreview] = useState(null);
   // introduce the hooks
   const [product_name, setProductName] = useState("");
   const [product_description, setProductDescription] = useState("");
@@ -43,6 +44,11 @@ const Addproducts = () => {
 
       // update the success hook with a message
       setSuccess(response.data.message)
+      
+    const file = e.target.files[0];
+    if (file) {
+      setPreview(URL.createObjectURL(file));
+    }
 
       // clearing the hooks (setting them back to default/empty)
       setProductName("");
@@ -72,57 +78,71 @@ const Addproducts = () => {
 
 
   return (
-    <div class="container justify-content-center col-md-6 signin">
-  <div class="heading">Add Your Treat Or Delicacy 🍰</div>
+    <div className="add-product-page d-flex align-items-center justify-content-center">
+      <div className="form-container shadow-lg">
+        <div className="row g-0">
+          
+          {/* Left Side: Image Preview Area */}
+          <div className="col-md-5 preview-section d-flex flex-column align-items-center justify-content-center p-4">
+            <h4 className="brand-text mb-4">Product Cover</h4>
+            <div className="image-placeholder shadow-sm">
+              {preview ? (
+                <img src={preview} alt="Preview" className="img-fluid rounded" />
+              ) : (
+                <div className="text-center text-muted">
+                  <i className="fa-solid fa-cloud-arrow-up fs-1 mb-2"></i>
+                  <p>No image selected</p>
+                </div>
+              )}
+            </div>
+          </div>
 
-        {/* bind the loading hook */}
-        {loading && <Loader />}
-      <h3 className="text-success">{success}</h3>
-      <h4 className="text-danger">{error}</h4>
-      
- <form class="form" onSubmit={handleSubmit}>
+          {/* Right Side: Form Fields */}
+          <div className="col-md-7 p-5">
+            <h2 className="brand-text mb-2">Add New Delicacy ✨</h2>
+            <p className="text-muted small mb-4">Fill in the details to list your new story or treat.</p>
+            
+            <form>
+              <div className="mb-3">
+                <label className="form-label fw-bold">Product Name</label>
+                <input type="text" className="form-control custom-input" placeholder="e.g. Midnight Velvet Cake" />
+              </div>
 
-     <input type="text"
-          placeholder='Enter the product name 🍰'
-          className='form-control' 
-          required
-          value={product_name}
-          onChange={(e) => setProductName(e.target.value)}/> <br />
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <label className="form-label fw-bold">Category</label>
+                  <select className="form-select custom-input">
+                    <option>Select Category</option>
+                    <option>Classic Novels</option>
+                    <option>Sweet Treats</option>
+                    <option>Artisan Coffee</option>
+                  </select>
+                </div>
+                <div className="col-md-6 mb-3">
+                  <label className="form-label fw-bold">Price (Kes)</label>
+                  <input type="number" className="form-control custom-input" placeholder="0.00" onChange={(e) => setProductCost(e.target.value)} />
+                </div>
+              </div>
 
-          {/* {product_name} */}
+              <div className="mb-3">
+                <label className="form-label fw-bold">Description</label>
+                <textarea className="form-control custom-input" rows="3" placeholder="Tell the story of this product..."></textarea>
+              </div>
 
-          <input type="text" 
-          placeholder='Enter the product Description'
-          className='form-control'
-          required
-          value={product_description}
-          onChange={(e) => setProductDescription(e.target.value)}/> <br />
+              <div className="mb-4">
+                <label className="form-label fw-bold">Upload Photo</label>
+                <input type="file" className="form-control custom-input"onChange={(e) => setProductPhoto(e.target.files[0])}/> 
+              </div>
 
-          {/* {product_description} */}
+              <button type="submit" className="signup-btn w-100 border-0 py-2">
+                List Product 🚀
+              </button>
+            </form>
+          </div>
 
-          <input type="text"
-          placeholder='Enter the price of the product'
-          className='form-control'
-          required
-          value={product_cost}
-          onChange={(e) => setProductCost(e.target.value)} /> <br />
-
-          {/* {product_cost} */}
-
-          <label className='text-primary'>Product Photo</label>
-          <input type="file" 
-          className='form-control'
-          required
-          accept='image/*'
-          ref={fileInputRef}
-          onChange={(e) => setProductPhoto(e.target.files[0])}/>
-          <br />
-
-    
-    <input value="Add Product" type="submit" class="login-button" />
-  </form>
- 
-</div>
+        </div>
+      </div>
+    </div>
   )
 }
 
