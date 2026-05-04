@@ -9,6 +9,7 @@ import Makepayment from './components/Makepayment';
 import Notfound from './components/Notfound';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
+import ProductDetail from './components/ProductDetail';
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
         <Route path='/addproducts' element={<Addproducts />} />
         <Route path='/makepayment' element={<Makepayment /> } />
         <Route path='*' element={<Notfound />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
       <Footer />
     </Router>

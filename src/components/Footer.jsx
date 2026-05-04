@@ -8,12 +8,13 @@ const Footer = () => {
       {/* Brand & Mission */}
       <div className="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
         <h3 className="brand-text footer-logo">NovellaHub 🦋</h3>
-        <p className="footer-tagline">Baking stories into every bite since 2026.</p>
-        <div className="social-icons">
-          <span className="icon">📸</span>
-          <span className="icon">🐦</span>
-          <span className="icon">📘</span>
-        </div>
+        <p className="footer-tagline">Your next favorite story?
+Yeah… it’s probably here.
+
+Start reading, get hooked,
+and don’t say we didn’t warn you.
+</p>
+        
       </div>
 
       {/* Quick Links */}
@@ -21,7 +22,6 @@ const Footer = () => {
         <h5 className="footer-title">Sweet Links</h5>
         <ul className="list-unstyled">
           <li><a href="/" className="footer-link">Our Story</a></li>
-          <li><a href="/menu" className="footer-link">Daily Treats</a></li>
           <li><a href="/contact" className="footer-link">Say Hello</a></li>
         </ul>
       </div>

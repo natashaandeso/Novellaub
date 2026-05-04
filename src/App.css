@@ -1036,3 +1036,77 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+/* Custom Dark Card Styling */
+.dark-card {
+  background: rgba(30, 30, 60, 0.7) !important; /* Deep navy translucent */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(162, 155, 254, 0.2); /* Soft lavender border */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 100%;
+}
+
+/* Book Cover Styling */
+.dark-card .card-img-top {
+  height: 280px;
+  object-fit: cover;
+  filter: brightness(0.9); /* Slightly dimmer to fit the dark vibe */
+  transition: filter 0.3s ease;
+}
+
+/* Typography for Dark View */
+.dark-card .brand-text {
+  color: #a29bfe !important; /* Glowing Lavender */
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* Hover Effects */
+.dark-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: #a29bfe;
+  box-shadow: 0 15px 40px rgba(108, 92, 231, 0.3);
+}
+
+.dark-card:hover .card-img-top {
+  filter: brightness(1.1); /* Lights up the book cover on hover */
+}
+
+/* Button for Dark Mode */
+.dark-card .signup-btn {
+  background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+  width: 100%;
+}
+.search-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-search-input {
+  border-radius: 50px;
+  border: 2px solid #eee;
+  padding: 15px 25px;
+  outline: none;
+  transition: 0.3s;
+  background: white;
+  font-size: 1.1rem;
+}
+
+.main-search-input:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 15px rgba(108, 92, 231, 0.2);
+}
+
+.search-icon-inside {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none; /* Ensures you can click the 'X' to clear */
+  z-index: 5;
+}
