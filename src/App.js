@@ -10,6 +10,7 @@ import Notfound from './components/Notfound';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 import ProductDetail from './components/ProductDetail';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
 </div>
   </div>
 </nav>
+      
     <Routes>
         <Route path="/" element={<Getproducts />} />
         <Route path='/signup' element={<Signup />} />
