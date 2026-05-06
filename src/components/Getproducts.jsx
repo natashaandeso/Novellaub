@@ -37,33 +37,57 @@ const Getproducts = () => {
 
   return (
     <div className='row homepg'>
-      <section className="row">
-        <div className="container mt-5">
-          <div className="row align-items-center">
-            {/* Video Column */}
-            <div className="col-lg-7 col-md-12">
-              <video
-                src="/5739808-hd_1920_1080_30fps.mp4"
-                width="100%"
-                className="myvideo"
-                autoPlay muted loop playsInline
-              />
-            </div>
+      <section className="hero-section">
+  <div className="container">
+    <div className="row align-items-center hero-grid-row">
 
-            {/* Content Column */}
-            <div className="col-lg-5 col-md-12 mt-4 mt-lg-0 px-lg-5">
-              <h2 className="brand-text rainbow-text">🌸 House of Novels 🌸</h2>
-              <p className="text-success">
-                Read. Feel. Repeat.
-                This isn't just a website—it's a whole escape.
-                Pick a story and disappear for a while.
-                Stay awhile. You'll like it here. "A room without a book is like an empty soul"
-              </p>
-              <button className="signup-btn border-0">Explore More</button>
-            </div>
-          </div>
+      {/* Video Column */}
+      <div className="col-lg-7 col-md-12">
+        <div className="hero-video-frame">
+          <video
+            src="/5739808-hd_1920_1080_30fps.mp4"
+            width="100%"
+            className="myvideo"
+            autoPlay muted loop playsInline
+          />
         </div>
-      </section>
+      </div>
+
+      {/* Content Column */}
+      <div className="col-lg-5 col-md-12 mt-5 mt-lg-0 hero-content-col px-lg-5">
+        <div className="hero-eyebrow">House of Novels</div>
+
+        <h1 className="hero-title">
+          Where every story<br />
+          <span className="hero-gradient">finds its reader</span>
+        </h1>
+
+        <p className="hero-body">
+          "A room without books is like a body without a soul."
+          Pick a story and disappear for a while. You'll like it here.
+        </p>
+
+        <div className="hero-badges">
+          <span className="hero-badge">📖 Read Online</span>
+          <span className="hero-badge" style={{ animationDelay: '0.4s' }}>✍️ Publish Your Story</span>
+          <span className="hero-badge" style={{ animationDelay: '0.8s' }}>🌍 African Voices</span>
+        </div>
+
+        <div className="hero-cta-row">
+          <a href="#trending" className="hero-btn-primary">Explore Stories →</a>
+          <a href="/about" className="hero-btn-ghost">Learn More</a>
+        </div>
+
+        <div className="hero-stats">
+          <div className="hero-stat"><span className="hero-stat-num">2,400+</span><span className="hero-stat-lbl">Stories</span></div>
+          <div className="hero-stat"><span className="hero-stat-num">180+</span><span className="hero-stat-lbl">Writers</span></div>
+          <div className="hero-stat"><span className="hero-stat-num">34</span><span className="hero-stat-lbl">Countries</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       
       {/* SEARCH SECTION */}
