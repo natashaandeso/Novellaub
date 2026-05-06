@@ -1110,3 +1110,65 @@
   pointer-events: none; /* Ensures you can click the 'X' to clear */
   z-index: 5;
 }
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position:  400px 0; }
+}
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-4px); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes growLine {
+  from { width: 0; }
+  to   { width: 80px; }
+}
+
+.trending-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  animation: slideIn 0.6s ease both;
+  position: relative;
+}
+.trending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #AFA9EC;
+  padding: 3px 10px;
+  border: 0.5px solid rgba(175,169,236,0.35);
+  border-radius: 20px;
+  background: rgba(238,237,254,0.15);
+}
+.trending-badge .ti { font-size: 12px; }
+
+.trending-heading {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 32px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #7F77DD 0%, #AFA9EC 40%, #D4537E 70%, #7F77DD 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite, floatUp 4s ease-in-out infinite;
+}
+
+.trending-line {
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7F77DD, #D4537E);
+  animation: growLine 0.8s 0.3s ease both;
+}

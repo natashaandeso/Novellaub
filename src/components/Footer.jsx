@@ -21,7 +21,7 @@ and don’t say we didn’t warn you.
       <div className="col-lg-4 text-center mb-4 mb-lg-0">
         <h5 className="footer-title">Sweet Links</h5>
         <ul className="list-unstyled">
-          <li><a href="/" className="footer-link">Our Story</a></li>
+          <li><a href="/about" className="footer-link">Our Story</a></li>
           <li><a href="/contact" className="footer-link">Say Hello</a></li>
         </ul>
       </div>
