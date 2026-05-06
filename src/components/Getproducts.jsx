@@ -65,38 +65,40 @@ const Getproducts = () => {
         </div>
       </section>
 
-      <Mycarousel />
-
+      
       {/* SEARCH SECTION */}
-      <div className="search-hero-section d-flex justify-content-center align-items-center" style={{ zIndex: 1 }}>
-        <div className="search-card text-center p-5" style={{ zIndex: 2 }}>
-          <h3 className="brand-text mb-4">Find a story that hits different… ✨</h3>
-
-          <div className="search-wrapper position-relative" style={{ zIndex: 10 }}>
-            <input
-              type="text"
-              className="main-search-input w-100"
-              placeholder="Search stories, vibes, and feels"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              style={{ paddingRight: '50px', position: 'relative', zIndex: 11, pointerEvents: 'auto' }}
-            />
-            <div className="search-icon-inside" style={{ zIndex: 12, pointerEvents: 'none' }}>
-              {searchTerm ? (
-                <span style={{ cursor: 'pointer', pointerEvents: 'auto' }} onClick={() => setSearchTerm("")}>✖️</span>
-              ) : (
-                <span>🔍</span>
-              )}
-            </div>
-          </div>
-
-          <div className="popular-tags mt-3">
-            <span className="badge rounded-pill bg-light text-dark mx-1" style={{ cursor: 'pointer' }} onClick={() => setSearchTerm("Memory")}>#AshesofMemory</span>
-            <span className="badge rounded-pill bg-light text-dark mx-1" style={{ cursor: 'pointer' }} onClick={() => setSearchTerm("New")}>#NewArrivals</span>
-          </div>
+      {/* SEARCH SECTION - CLEAN & SHORT */}
+<div className="search-hero-section">
+  <div className="text-center w-100 px-3">
+    <h3 className="mb-4">Find your next story...</h3>
+    
+    <div className="d-flex flex-column align-items-center">
+      <div className="search-wrapper">
+        <input 
+          type="text" 
+          className="main-search-input" 
+          placeholder="Search stories..." 
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <div className="search-icon-inside" style={{ color: '#a29bfe' }}>
+          {searchTerm ? (
+            <span onClick={() => setSearchTerm("")} style={{cursor:'pointer'}}>✖️</span>
+          ) : (
+            <span>🔍</span>
+          )}
         </div>
       </div>
+      
+      <div className="popular-tags mt-3">
+        <span className="badge rounded-pill mx-1" onClick={() => setSearchTerm("Memory")}>#Memory</span>
+        <span className="badge rounded-pill mx-1" onClick={() => setSearchTerm("New")}>#New</span>
+      </div>
+    </div>
+  </div>
+</div>
 
+<Mycarousel />
       {loading && <Loader />}
 
       {/* In your JSX */}

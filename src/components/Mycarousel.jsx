@@ -19,9 +19,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">Luna Lona The Moon Wolf</h5>
                   {/* <p className="card-text small">So soft, it melts instantly.</p> */}
-                  <div className="mt-auto"> {/* This pushes the button to the bottom */}
-                    <button className="signup-btn border-0 py-1 px-3">Read More</button>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -33,7 +31,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">Chained by Choice</h5>
                   {/* <p className="card-text small">Classic crunch in every bite.</p> */}
-                  <button className="signup-btn border-0 py-1 px-3">Read More</button>
+                  
                 </div>
               </div>
             </div>
@@ -45,7 +43,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">The Omegas Awekening</h5>
                   {/* <p className="card-text small">Classic crunch in every bite.</p> */}
-                  <button className="signup-btn border-0 py-1 px-3">Read More</button>
+                 
                 </div>
               </div>
             </div>
@@ -57,7 +55,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">You Rejected a Silver Wolf</h5>
                   {/* <p className="card-text small">Classic crunch in every bite.</p> */}
-                  <button className="signup-btn border-0 py-1 px-3">Read More</button>
+                  
                 </div>
               </div>
             </div>
@@ -69,7 +67,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">Shy </h5>
                   {/* <p className="card-text small">Classic crunch in every bite.</p> */}
-                  <button className="signup-btn border-0 py-1 px-3">Read More</button>
+                  
                 </div>
               </div>
             </div>
@@ -85,7 +83,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">The Mafias Naughty..</h5>
                   {/* <p className="card-text small">Classic crunch in every bite.</p> */}
-                  <button className="signup-btn border-0 py-1 px-3">Read More</button>
+                  
                 </div>
               </div>
               
@@ -99,7 +97,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">The Nightmare </h5>
                   {/* <p className="card-text small">Classic crunch in every bite.</p> */}
-                  <button className="signup-btn border-0 py-1 px-3">Read More</button>
+                  
                 </div>
               </div>
             </div>
@@ -110,7 +108,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">Captured By Boss </h5>
                   {/* <p className="card-text small">Classic crunch in every bite.</p> */}
-                  <button className="signup-btn border-0 py-1 px-3">Read More</button>
+                  
                 </div>
               </div>
             </div>
@@ -121,7 +119,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">Money, Murder </h5>
                   {/* <p className="card-text small">Classic crunch in every bite.</p> */}
-                  <button className="signup-btn border-0 py-1 px-3">Read More</button>
+                  
                 </div>
               </div>
             </div>
@@ -132,7 +130,7 @@ const Mycarousel = () => {
                 <div className="card-body text-center">
                   <h5 className="brand-text fs-5">Dirty Little Secret </h5>
                   {/* <p className="card-text small">Classic crunch in every bite.</p> */}
-                  <button className="signup-btn border-0 py-1 px-3">Read More</button>
+                  
                 </div>
               </div>
             </div>
