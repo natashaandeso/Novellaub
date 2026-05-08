@@ -66,7 +66,7 @@ const AboutUs = () => {
 
       {/* ── HERO ── */}
       <section className="about-hero" ref={addRef}>
-        <div className="hero-eyebrow">✦ Our Story ✦</div>
+        <div className="hero-eyebrow">✦ About Us ✦</div>
         <h1 className="hero-title">
           Where Words<br />
           <span className="gradient-text">Find a Home</span>
@@ -150,7 +150,7 @@ const AboutUs = () => {
           <p>Your next favourite story is already waiting for you on the shelf.</p>
           <div className="cta-buttons">
             <a href="/" className="cta-primary">Browse Stories 📚</a>
-            <a href="/signup" className="cta-secondary">Join as a Writer ✍️</a>
+            
           </div>
         </div>
       </section>

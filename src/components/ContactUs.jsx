@@ -4,7 +4,7 @@ const contactMethods = [
   {
     icon: '✉️',
     label: 'Email Us',
-    value: 'hello@novellahub.com',
+    value: 'andesonatasha@gmail.com',
     sub: 'We reply within 24 hours',
     color: '#c084fc',
     bg: 'rgba(192,132,252,0.1)',
@@ -155,7 +155,7 @@ const ContactUs = () => {
           <p className="ct-cta-sub">
             Drop us an email and we'll get back to you within 24 hours.
           </p>
-          <a href="mailto:hello@novellahub.com" className="ct-cta-btn">
+          <a href="andesonatasha@gmail.com" className="ct-cta-btn">
             Email Us Directly ✦
           </a>
         </div>
