@@ -74,8 +74,7 @@ const Getproducts = () => {
         </div>
 
         <div className="hero-cta-row">
-          <a href="#trending" className="hero-btn-primary">Explore Stories →</a>
-          <a href="/about" className="hero-btn-ghost">Learn More</a>
+        <a href="/about" className="hero-btn-ghost">Learn More</a>
         </div>
 
         <div className="hero-stats">

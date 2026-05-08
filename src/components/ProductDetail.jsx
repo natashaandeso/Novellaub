@@ -62,9 +62,7 @@ const ProductDetail = () => {
           <div className="action-buttons d-flex gap-3 flex-wrap">
             {isLoggedIn ? (
               <>
-                <button className="signup-btn border-0 py-3 px-5" onClick={handleReadOnline}>
-                  Read Online 📖
-                </button>
+                
 
                 {/* ✅ Navigates to Makepayment page with product in state */}
                 <button className="btn btn-outline-info py-3 px-5" onClick={handleDownload}>
