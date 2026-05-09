@@ -13,6 +13,7 @@ import ProductDetail from './components/ProductDetail';
 import Chatbot from './components/Chatbot';
 import AboutUs from './components/AboutUs'; // ✅ 1. Import
 import ContactUs from './components/ContactUs';
+import ChapterPage from './components/ChapterPage';
 
 function Navbar() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -124,6 +125,7 @@ function App() {
         <Route path='/contact' element={<ContactUs />} />
         <Route path='*' element={<Notfound />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/chapter" element={<ChapterPage />} />
       </Routes>
 
       <Footer />

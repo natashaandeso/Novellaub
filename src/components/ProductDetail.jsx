@@ -1,27 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import ChapterReader from './ChapterReader';
 
 const ProductDetail = () => {
   const { state }  = useLocation();
   const navigate   = useNavigate();
   const product    = state?.product;
 
+  const [showReader, setShowReader] = useState(false);
+
   if (!product) return <div className="text-white text-center mt-5">Product not found...</div>;
 
   const img_url  = "https://tashaandeso.alwaysdata.net/static/images/";
-  const file_url = "https://tashaandeso.alwaysdata.net/static/files/";
 
   const isLoggedIn = !!localStorage.getItem("user");
 
-  const handleReadOnline = () => {
-    if (product.product_file) {
-      window.open(file_url + product.product_file, "_blank");
-    } else {
-      alert("PDF file not found for this product.");
-    }
-  };
-
-  // ✅ Passes { product } to match Makepayment's: const { product } = useLocation().state || {}
   const handleDownload = () => {
     navigate("/makepayment", { state: { product } });
   };
@@ -62,9 +55,14 @@ const ProductDetail = () => {
           <div className="action-buttons d-flex gap-3 flex-wrap">
             {isLoggedIn ? (
               <>
-                
+                {/* ✅ Read Online — opens inline ChapterReader */}
+                <button
+                  className="btn btn-outline-info py-3 px-5"
+                  onClick={() => setShowReader(prev => !prev)}
+                >
+                  {showReader ? 'Close Reader ✕' : 'Read Online'}
+                </button>
 
-                {/* ✅ Navigates to Makepayment page with product in state */}
                 <button className="btn btn-outline-info py-3 px-5" onClick={handleDownload}>
                   Download PDF 💳
                 </button>
@@ -83,6 +81,15 @@ const ProductDetail = () => {
               </div>
             )}
           </div>
+
+          {/* ✅ Inline Chapter Reader — only shown when logged in and toggled */}
+          {isLoggedIn && showReader && (
+            <ChapterReader
+              product={product}
+              onClose={() => setShowReader(false)}
+            />
+          )}
+
         </div>
       </div>
     </div>
