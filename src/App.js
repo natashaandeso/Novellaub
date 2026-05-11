@@ -14,6 +14,9 @@ import Chatbot from './components/Chatbot';
 import AboutUs from './components/AboutUs'; // ✅ 1. Import
 import ContactUs from './components/ContactUs';
 import ChapterPage from './components/ChapterPage';
+import BlogPage from './components/BlogPage';
+import BlogPostdetail from './components/BlogPostdetail';
+import Createpost from './components/Createpost';
 
 function Navbar() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -59,6 +62,11 @@ function Navbar() {
               <a className="nav-link custom-link" href="/contact">Contact Us</a>
               </li>
 
+              {/* ✅ Blog link — visible to everyone */}
+{/* <li className="nav-item">
+  <a className="nav-link custom-link" href="/blog">Blog</a>
+</li> */}
+
               {user && (
                 <li className="nav-item">
                   <a className="nav-link custom-link addproduct" href="/addproducts">
@@ -92,6 +100,9 @@ function Navbar() {
                   <li className="nav-item">
                 <a className="nav-link custom-link" href="/signup">Sign Up</a>
               </li>
+
+              
+
                 </>
               )}
 
@@ -126,6 +137,9 @@ function App() {
         <Route path='*' element={<Notfound />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/chapter" element={<ChapterPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blogpost"    element={<BlogPostdetail />} />
+        <Route path="/blogcreate"  element={<Createpost />} />
       </Routes>
 
       <Footer />
